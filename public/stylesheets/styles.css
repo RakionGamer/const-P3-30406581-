@@ -101,6 +101,19 @@ body{
     overflow-x:hidden;
     font-family:"Personalizado";
 }
+
+.menu-translate.trans {
+    /* left: 0; */
+    left: 0;
+    right: auto;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 1.15rem;
+    padding: .3rem;
+}
+
+.menu-translate.trans .translate2 {
+    padding-right: .3rem;
+}
 /*
 .verificacion-captcha{
     background-color: rgb(52, 187, 199);

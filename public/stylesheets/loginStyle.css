@@ -1,0 +1,244 @@
+:root {
+    --button-color:#f0f0f0;
+    --blue-white: #34bbc7;
+}
+
+@font-face{
+    font-family: "tommy";
+    src: url(/fuente/tommy.otf);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "tommy";
+}
+
+
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.login-register {
+    width: 720px;
+    height: 475px;
+    border-radius: 1.5rem;
+    display: flex;
+    background: white;
+}
+
+
+.login,
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    transition: background-color .2s linear;
+}
+
+.register {
+    position:relative;
+    background-color: var(--blue-white);
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@keyframes move {
+    0% {
+        transform: translateY(1.5rem);
+    }
+
+    100% {
+        transform: translateY(-1.5rem);
+    }
+}
+
+
+
+.login {
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+    position: relative;
+}
+
+
+.astronauta {
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    animation: move 1s infinite alternate ease-in-out;
+    transition: opacity .3s ease
+}
+
+
+.astronauta-1 {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    animation: move-1 1s infinite alternate ease-in-out;
+    transition: opacity .3s ease
+}
+
+
+@keyframes move-1 {
+    0% {
+        transform: translateY(1.5rem);
+    }
+
+    100% {
+        transform: translateY(-1.5rem);
+    }
+}
+/*Para el login*/
+
+
+.style-register {
+    opacity: 0;
+    transition: opacity .3s ease;
+    pointer-events: none;
+}
+
+.style-login {
+    transition: opacity .3s ease;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/*Botones*/
+
+input,
+button {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin:0;
+    font-size: 1rem;
+}
+
+
+.input{
+    position: relative;
+    margin: .4rem 0rem;
+}
+
+
+label {
+    font-size:1.1rem;
+}
+
+input {
+    padding: .4rem .4rem .4rem 1.7rem;
+    width: 100%;
+    border-bottom: 1.4px solid black;
+    transition: border-bottom .5s;
+    background-color: transparent;
+    
+}
+
+
+input::placeholder {
+    transition: color .3s ease;
+}
+
+input:hover::placeholder {
+    color: transparent;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    color: black;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+input:focus:invalid {
+    border-bottom: 1.4px solid red;
+}
+
+input:focus:valid {
+    border-bottom: 1.4px solid green
+}
+
+/*Boton*/
+.button-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: calc(235px/2);
+    cursor: pointer;
+    padding: .4rem;
+    margin: 1rem 1rem .9rem 1rem;
+    border-radius: 1rem;
+    transition: transform .3s ease, 
+    color .3s ease, 
+    background-color .3s ease;
+    
+}
+
+
+button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: var(--blue-white)
+}
+
+/**/
+input[placeholder="Ingrese su correo"] {
+    margin-bottom: .7rem;
+}
+
+/*svg*/
+.user {
+    position: absolute;
+    top: .2rem;
+}
+
+a {
+    padding: .4rem;
+    transition: transform .3s ease, 
+    color .3s ease, 
+    background-color .3s ease,
+    text-decoration .3s ease;
+    border-radius: 1rem;
+    background-color: var(--button-color);
+}
+a:hover {
+    transform: scale(1.05);
+    color: white;
+    background-color: var(--blue-white);
+}
