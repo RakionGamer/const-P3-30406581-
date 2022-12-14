@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/loginStyle.css">
+</head>
+<body>
+    <main>
+        <section class="login-register">
+            <article class="login">
+                <img src="/images/planeyt.png" alt="planet" width="290px" class="astronauta-1">
+                <form action="/login" class="style-login" method="POST">
+                    <h2>¡Bienvenido!</h2>
+                    <label for="">Correo</label>
+                    <div class="input">
+                        <img src="/images/user.svg" alt="user" width="22px" class="user">
+                    <input type="email" placeholder="Ingrese su correo" name="email" required>
+                    </div>
+                    <label for="">Contraseña</label>
+                    <div class="input">
+                        <img src="/images/password.svg" alt="password" width="22px" class="user">
+                        <input type="password" placeholder="Ingrese su contraseña" name="password" required>
+                        </div>
+                    <div class="button-position">
+                        <button>Enviar</button>
+                        <a href="#register" id="register"><p>¿No te has registrado?</p></a>
+                    </div>
+                    
+                </form>
+            </article>
+            <article class="register">
+                <img src="/images/planeyt.png" alt="planet" width="290px" class="astronauta">
+                <form action="/register" class="style-register" method="POST">
+                    <h2>¡Registrate!</h2>
+                    <label for="">Correo</label>
+                    <div class="input">
+                        <img src="/images/user.svg" alt="user" width="22px" class="user">
+                        <input type="email" placeholder="Ingrese su correo" name="email" required>
+                    </div>
+                    <label for="">Contraseña</label>
+                    <div class="input">
+                        <img src="/images/password.svg" alt="password" width="22px" class="user">
+                        <input type="password" placeholder="Ingrese su contraseña" name="password" required>
+                    </div>
+                    <div class="button-position">
+                        <button>Enviar</button>
+                        <a href="#login" id="login"><p>¿Ya tienes cuenta?</p></a>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <script src="/javascripts/efecto.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(alert) { %>
+      <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text:'<%= alertMessage %>',
+        icon:'<%= alertIcon %>',
+        showConfirmButton: <%= showConfirmButton %>,
+        timer: <%= timer %>
+      }).then(()=>{
+        window.location = '/<%= ruta %>'
+      })
+    </script>
+  <% } %>
+</body>
+</html> 
