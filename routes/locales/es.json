@@ -30,5 +30,6 @@
 	"CSS": "Inspección de código CSS. Modelo Flexbox y opción de reinicio, ICON-FONT casero y composición tipográfica común.",
 	"Javascript": "NodeJS / Express, buen conocimiento de diferentes plataformas navegadores y cómo funciona cada uno.",
 	"Photoshop": "Deformación de imágenes, formas y trazados, Buen mano de la paleta de colores.",
-	"Translate": "Translate to English"
+	"Translate": "Translate to English",
+	"Logout": "Log out"
 }
